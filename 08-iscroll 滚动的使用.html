@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--我必须让这个东西出现滚动条-->
+    <style>
+         #wrapper{
+              width: 300px;
+              height: 400px;
+              border: 1px solid #ccc;
+              overflow: hidden;
+              position: relative;
+         }
+    </style>
+
+</head>
+<body>
+<div id="wrapper">
+    <ul>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+        <p>明明妹妹</p>
+    </ul>
+</div>
+<script src="js/iscroll.js"></script>
+<script>
+    /*现在的这个内容带使用鼠标拖动的时候带惯性.*/
+    var myScroll = new IScroll('#wrapper',{
+        scrollbars: true,
+        mouseWheel: true
+    });
+
+
+    /*做滚动刷新.*/
+    myScroll.on('scrollEnd', function(){
+          alert("w");
+          //通过我们的ajax 去给服务器发送请求，然后请求数据.
+         //请求数据之后我就可以把数据填充到。ul 区域.
+    });
+</script>
+</body>
+</html>

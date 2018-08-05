@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>移动端视口.</title>
+    <!--
+          其实就是让视口的宽度等于设备的这个宽度。
+          设备能够存在375px，视口的宽度就等于375，
+         html 的大小就是375，这个时候页面套在375 的这个浏览器里面
+         就不会产生缩放了.
+
+          现在假设我对body 里面的div 的盒子的宽度设置的时候大于viewport
+        的宽度的时候，就出现了 这个横向滚动条.
+         这个时候我们的宽度就要采用这个百分比了.
+
+
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 500px;
+            height: 400px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<div>
+    小旋风
+</div>
+</body>
+</html>
